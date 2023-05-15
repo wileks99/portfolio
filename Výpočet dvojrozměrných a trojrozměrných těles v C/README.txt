@@ -22,9 +22,10 @@ Při volbě pro trojrozměrná tělesa:
 
 2. Po následném zadání hodnot se vám vypíše obvod a obsah (povrch a objem).
 
-Instalace:
+Instalace a spuštění:
 
-Zkopírujete kod a zadáte do libovolného compilatoru.
+Zkopírujete kod a zadáte do libovolného compilatoru nebo klikněte na main.exe
+
 
 
 
