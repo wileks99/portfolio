@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Výpočty</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='script.js'></script>
+</head>
+<body>
+    <h1>Vítej na stránce pro výpočet objemu, povrchu, obvodu a obsahu dvojrozměrných a trojrozměrných těles.</h1>
+    
+    <table>
+        <tr><td>Čtverec</td><td><input type="radio" name="yesno" id="ctverec" onclick="vyber()"></td></tr>
+        <tr><td>Obdelník</td><td><input type="radio" name="yesno" id="obdelnik" onclick="vyber()"></td></tr>
+        <tr><td>Trojúhelník</td><td><input type="radio" name="yesno" id="trojuhelnik" onclick="vyber()"></td></tr>
+        <tr><td>Kruh</td><td><input type="radio" name="yesno" id="kruh" onclick="vyber()"></td></tr>
+        <tr><td>Krychle</td><td><input type="radio" name="yesno" id="krychle" onclick="vyber()"></td></tr>
+        <tr><td>Kvadr</td><td><input type="radio" name="yesno" id="kvadr" onclick="vyber()"></td></tr>
+        <tr><td>Válec</td><td><input type="radio" name="yesno" id="valec" onclick="vyber()"></td></tr>
+    </table>
+
+    <div id="1" style="display:none">
+        <form name="ctverecek">
+            <h2>Čtverec</h2>
+            <h3>Velikost strany a:</h3>
+            <input type="text" name="sidea" value="0" size="5">
+            <input type="button" value="Vypočítej" onclick="ctverec(sidea.value)">
+            <input type="button" value="Zobraz" onclick="zobraz_ctverec()">
+            <input type="button" value="Zneviditelni" onclick="zneviditelni_ctverec()">
+        </form>
+    </div>
+
+    <div id="2" style="display:none">
+        <form name="obdelnicek">
+            <h2>Obdelník</h2>
+            <h3>Velikost strany a:</h3>
+            <input type="text" name="sidea" value="0" size="5">
+            <h3>Velikost strany b:</h3>
+            <input type="text" name="sideb" value="0" size="5">
+            <input type="button" value="Vypočítej" onclick="obdelnik(sidea.value, sideb.value)">
+            <input type="button" value="Zobraz" onclick="zobraz_obdelnik()">
+            <input type="button" value="Zneviditelni" onclick="zneviditelni_obdelnik()">
+        </form>
+    </div>
+
+    <div id="3" style="display:none">
+        <form name="trojuhelnicek">
+            <h2>Trojúhelník</h2>
+            <h3>Velikost strany a:</h3>
+            <input type="text" name="sidea" value="0" size="5">
+            <h3>Velikost strany b:</h3>
+            <input type="text" name="sideb" value="0" size="5">
+            <h3>Velikost strany c:</h3>
+            <input type="text" name="sidec" value="0" size="5">
+            <input type="button" value="Vypočítej" onclick="trojuhelnik(sidea.value, sideb.value, sidec.value)">
+            <input type="button" value="Zobraz" onclick="zobraz_trojuhelnik()">
+            <input type="button" value="Zneviditelni" onclick="zneviditelni_trojuhelnik()">
+        </form>
+    </div>    
+
+    <div id="4" style="display:none">
+        <form name="kruhacek">
+            <h2>Kruh</h2>
+            <h3>Velikost poloměru r:</h3>
+            <input type="text" name="sider" value="0" size="5">
+            <input type="button" value="Vypočítej" onclick="kruh(sider.value)">
+            <input type="button" value="Zobraz" onclick="zobraz_kruh()">
+            <input type="button" value="Zneviditelni" onclick="zneviditelni_kruh()">
+        </form>
+    </div>
+
+    <div id="5" style="display:none">
+        <form name="krychlacek">
+            <h2>Krychle</h2>
+            <h3>Velikost hrany a:</h3>
+            <input type="text" name="sidea" value="0" size="5">
+            <input type="button" value="Vypočítej" onclick="krychle(sidea.value)">
+            <input type="button" value="Zobraz" onclick="zobraz_krychle()">
+            <input type="button" value="Zneviditelni" onclick="zneviditelni_krychle()">
+        </form>
+    </div>
+
+    <div id="6" style="display:none">
+        <form name="kvadricek">
+            <h2>Kvádr</h2>
+            <h3>Velikost hrany a:</h3>
+            <input type="text" name="sidea" value="0" size="5">
+            <h3>Velikost hrany b:</h3>
+            <input type="text" name="sideb" value="0" size="5">
+            <h3>Velikost hrany c:</h3>
+            <input type="text" name="sidec" value="0" size="5">
+            <input type="button" value="Vypočítej" onclick="kvadr(sidea.value, sideb.value, sidec.value)">
+            <input type="button" value="Zobraz" onclick="zobraz_kvadr()">
+            <input type="button" value="Zneviditelni" onclick="zneviditelni_kvadr()">
+        </form>
+    </div>
+
+    <div id="7" style="display:none">
+        <form name="valecek">
+            <h2>Válec</h2>
+            <h3>Velikost poloměru válce:</h3>
+            <input type="text" name="sider" value="0" size="5">
+            <h3>Velikost výšky válce:</h3>
+            <input type="text" name="sidev" value="0" size="5">
+            <input type="button" value="Vypočítej" onclick="valec(sider.value, sidev.value)">
+            <input type="button" value="Zobraz" onclick="zobraz_valec()">
+            <input type="button" value="Zneviditelni" onclick="zneviditelni_valec()">
+        </form>
+    </div>
+    
+    <p>Obvod je: <b id="obvod"></b></p>
+    <p>Obsah je: <b id="obsah"></b></p>
+
+    <p id="object"></p>
+
+</body>
+</html>
